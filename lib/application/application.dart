@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tips_and_tricks_flutter/presentation/bloc/auth/auth_bloc.dart';
-import 'package:tips_and_tricks_flutter/presentation/bloc/auth/auth_state.dart';
-import 'package:tips_and_tricks_flutter/presentation/ui/home_page.dart';
-import 'package:tips_and_tricks_flutter/presentation/ui/login_page.dart';
+import 'package:tips_and_tricks_flutter/presentation/blocs/auth/auth_bloc.dart';
+import 'package:tips_and_tricks_flutter/presentation/blocs/auth/auth_state.dart';
+import 'package:tips_and_tricks_flutter/presentation/pages/home_page.dart';
+import 'package:tips_and_tricks_flutter/presentation/pages/login_page.dart';
 
 class Application extends StatefulWidget {
   static const path = 'Application';
@@ -14,7 +14,6 @@ class Application extends StatefulWidget {
 }
 
 class _ApplicationState extends State<Application> {
-
   @override
   void initState() {
     super.initState();
@@ -23,12 +22,13 @@ class _ApplicationState extends State<Application> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BlocBuilder<AuthBloc, AuthState>(
-          builder: (context, state) {
-            return state.when(authorized: (profile) {
+      home: BlocBuilder<AuthBloc, AuthState>(builder: (context, state) {
+        return state.when(
+            authorized: (profile) {
               return HomePage();
-            }, unAuthorized: () => LoginPage());
-          }),
+            },
+            unAuthorized: () => LoginPage());
+      }),
     );
   }
 }
