@@ -1,8 +1,10 @@
 # tips_and_tricks_flutter
 
-A new Flutter project.
+Tips and tricks Flutter project.
 
 ## Getting Started
+
+Flutter project using repository pattern
 
 This project is a starting point for a Flutter application.
 
