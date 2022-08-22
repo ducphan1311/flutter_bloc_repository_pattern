@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:tips_and_tricks_flutter/domain/model/profile_model.dart';
+import 'package:tips_and_tricks_flutter/domain/models/profile_model.dart';
 part 'profile_dto.g.dart';
 
 @JsonSerializable()

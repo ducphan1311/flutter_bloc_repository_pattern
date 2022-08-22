@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tips_and_tricks_flutter/presentation/bloc/auth/auth_bloc.dart';
+import 'package:tips_and_tricks_flutter/presentation/blocs/auth/auth_bloc.dart';
 
 class LoginPage extends StatefulWidget {
   static const path = 'LoginPage';
