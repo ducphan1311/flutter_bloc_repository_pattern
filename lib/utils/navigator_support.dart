@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:developer' as developer;
 
 /// Support Nested Navigation Back Android
 class NavigatorSupport extends StatefulWidget {

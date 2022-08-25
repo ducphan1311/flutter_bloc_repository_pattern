@@ -7,4 +7,6 @@ abstract class AuthMockRepository {
   Future logout();
 
   Future<ProfileModel> profile();
+
+  Future<String> defaultData();
 }

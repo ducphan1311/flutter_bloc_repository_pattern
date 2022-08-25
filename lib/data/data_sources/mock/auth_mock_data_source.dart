@@ -5,16 +5,23 @@ import 'package:tips_and_tricks_flutter/domain/models/authentication_model.dart'
 import 'package:tips_and_tricks_flutter/domain/models/profile_model.dart';
 
 
-class AuthMockService extends AuthMockRepository{
+class AuthMockDataSource extends AuthMockRepository{
+  @override
   Future<AuthenticationModel> login(String userName, String passWord) async {
     return AuthenticationDto('accessToken', 'refreshToken');
   }
 
+  @override
   Future logout() async {
   }
 
+  @override
   Future<ProfileModel> profile() async {
     return ProfileDto('duc');
   }
 
+  @override
+  Future<String> defaultData() async {
+    return 'Data Auth';
+  }
 }
