@@ -1,6 +1,4 @@
-# tips_and_tricks_flutter
-
-Tips and tricks Flutter project.
+# flutter_bloc_repository_pattern
 
 ## Getting Started
 
